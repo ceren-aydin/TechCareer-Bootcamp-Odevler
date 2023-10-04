@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1) "  Çağatay Yıldız" isimli metindeki boşlukları kaldır.    (REPLACE)
+
+        var metin1 = "  Çağatay Yıldız";
+        console.log(metin1.replace(/\s/g, ''));
+
+
+        // 2) "cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+
+        var metin2 = "cagatay yildiz";
+        console.log(metin2.toUpperCase().replace(/\s/g, ''));
+
+
+        // 3) "******Çağatay Yıldız" isimli metindeki yıldızları kaldır (REPLACE)
+
+        var metin3 = "******Çağatay Yıldız";
+        console.log(metin3.replace(/\*/g, ''));
+
+
+        // 4) "Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+
+        var metin4 = "Çağatay  Yıldız";
+        console.log(metin4.replace(/\s+/g, ' '));
+
+
+        // 5) "**Tech Career**" isimli metindeki yıldızları kaldır (REPLACE)
+
+        var metin5 = "**Tech Career**";
+        console.log(metin5.replace(/\*/g, ''));
+
+        // 6) "Tech Career" isimli metnin soluna ve sağına 3 yıldız koy. "***Tech Career***" ( Normal toplama operatörü)
+
+        var metin6 = "Tech Career";
+        console.log("***" + metin6 + "***");
+
+
+        // 7) "Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült (SUBSTRING)
+
+        var metin7 = "Tech Career Bilişim teknolojileri";
+        var metninIlkKisimi = metin7.substring(0, 20);
+        var yeniMetin = metin7.substring(20, 33).toUpperCase();
+        console.log(metninIlkKisimi + yeniMetin);
+
+
+        // 8) "Tech bilişim" kelimelerin ilk harflerini büyült (Substring ve upper)
+
+        var metin = "tech bilişim";
+        var kelimeler = metin.split(" ");
+        for (var i = 0; i < kelimeler.length; i++) {
+            kelimeler[i] = kelimeler[i].substring(0, 1).toUpperCase() + kelimeler[i].slice(1);
+        }
+        var yeniMetin = kelimeler.join(" ");
+        console.log(yeniMetin);
+
+
+
+
+        //***********************************************************//
+
+
+        // "Tech Career" metnini tersten yazdır
+
+        var metin = "Tech Career";
+        var terstenMetin = "";
+        for (var i = metin.length - 1; i >= 0; i--) {
+            terstenMetin += metin.charAt(i);
+        }
+        console.log(terstenMetin);
+
+
+        // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+
+        var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+        var pozitifSayilarToplami = 0;
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) {
+                pozitifSayilarToplami = pozitifSayilarToplami + numbers[i];
+            }
+        }
+        console.log(pozitifSayilarToplami);
+
+
+        // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+
+        var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+        var enBuyukSayi = numbers[0];
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] > enBuyukSayi) {
+                enBuyukSayi = numbers[i];
+            }
+        }
+        console.log(enBuyukSayi);
+
+
+        //1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu consola yaz.
+
+        var bolunebilenler = [];
+        var bolunebilenlerToplam = 0;
+
+        for (var i = 1; i <= 50; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                bolunebilenler.push(i);
+                bolunebilenlerToplam++;
+            }
+        }
+        console.log("1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayılar: " + bolunebilenler);
+        console.log("1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıların adeti: " + bolunebilenlerToplam);
+
+    </script>
+</body>
+
+</html>
