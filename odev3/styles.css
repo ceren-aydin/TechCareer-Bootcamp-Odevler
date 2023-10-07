@@ -1,0 +1,55 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(34, 209, 34, 0.87);
+}
+
+.track {
+    margin: 20px;
+}
+
+.at {
+    position: absolute;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    margin-top: 200px;
+}
+
+#baslatButonu {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(184, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#kazanan {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+    color: rgb(184, 0, 0);
+}
+
+.bitisCizgisi {
+    width: 5px;
+    height: 100%;
+    background-color: rgb(184, 0, 0);
+    position: absolute;
+    right: 50px;
+    margin-top: -140px;
+}
+
+.at img {
+    width: 100px;
+    height: 100px;
+}
